@@ -53,5 +53,23 @@
             <version>5.0.9</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version> <!-- Make sure you're using a stable version -->
+                <configuration>
+                    <source>11</source> <!-- or your current Java version -->
+                    <target>11</target> <!-- or your current Java version -->
+                    <compilerArgs>
+                        <arg>--add-exports</arg>
+                        <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 
 </project>
